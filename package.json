@@ -2,5 +2,8 @@
     "name": "calculator",
     "version": "0.0.0",
     "main": "main.js",
-    "author": "Yoann Breton et Timothée Schneider-Maunoury"
+    "author": "Yoann Breton et Timothée Schneider-Maunoury",
+    "dependencies": {
+        "mathjs": "5.4.2"
+    }
 }
