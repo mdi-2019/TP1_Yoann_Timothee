@@ -5,5 +5,8 @@
     "author": "Yoann Breton et Timothée Schneider-Maunoury",
     "dependencies": {
         "mathjs": "5.4.2"
+    },
+    "scripts": {
+        "start": "node main.js"
     }
 }
