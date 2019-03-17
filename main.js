@@ -2,9 +2,6 @@ const normal = require('./normal')
 const scientifique = require('./scientifique')
 const readline = require('readline')
 
-console.log('\n**** Bienvenue dans ce super calculateur ! ****')
-console.log('Choisissez un mode de calcul :\n  1 -> normal\n  2 -> scientifique\n')
-
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -21,8 +18,19 @@ function modeChoice(answer) {
     }
 }
 
-rl.on('line', modeChoice)
+let main = function () {
+    console.log('\n**** Bienvenue dans ce super calculateur ! ****')
+    console.log("Pour quitter à n'importe quel moment, entrez 'quitter'.")
+    console.log('Choisissez un mode de calcul :\n  1 -> normal\n  2 -> scientifique\n')
+    rl.on('line', modeChoice)
+}
 
+rl.on('line', (answer) => {
+    if (answer === 'quitter') process.exit()
+})
+main()
+
+exports.main = main
 exports.rl = rl
 exports.previousResult = previousResult
 
