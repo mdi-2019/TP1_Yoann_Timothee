@@ -26,7 +26,10 @@ let main = function () {
 }
 
 rl.on('line', (answer) => {
-    if (answer === 'quitter') process.exit()
+    if (answer === 'quitter'){
+        console.log("\nMerci d'avoir utilisé notre calculateur, au revoir !");
+        process.exit()
+    }
 })
 main()
 
